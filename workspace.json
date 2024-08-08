@@ -1,0 +1,853 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-javascript",
+  "lastModifiedDate" : "2024-08-08T22:35:26Z",
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Customer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "customer"
+      },
+      "relationships" : [ {
+        "description" : "uses",
+        "destinationId" : "8",
+        "id" : "9",
+        "properties" : {
+          "structurizr.dsl.identifier" : "bb2815dd-4104-4afe-b8a0-284cbf8f4440"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "uses",
+        "destinationId" : "4",
+        "id" : "10",
+        "linkedRelationshipId" : "9",
+        "sourceId" : "1"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Staff",
+      "properties" : {
+        "structurizr.dsl.identifier" : "staff"
+      },
+      "relationships" : [ {
+        "description" : "uses",
+        "destinationId" : "11",
+        "id" : "12",
+        "properties" : {
+          "structurizr.dsl.identifier" : "76515d57-2871-4e84-9d60-f7c9084dbb48"
+        },
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "uses",
+        "destinationId" : "4",
+        "id" : "13",
+        "linkedRelationshipId" : "12",
+        "sourceId" : "2"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "An object storage service by Amazon AWS",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "AWS S3",
+      "properties" : {
+        "structurizr.dsl.identifier" : "awss3ss"
+      },
+      "tags" : "Element,Software System,Existing System"
+    }, {
+      "containers" : [ {
+        "description" : "an open-source high performance immutable database",
+        "documentation" : { },
+        "id" : "5",
+        "name" : "ImmuDB",
+        "properties" : {
+          "structurizr.dsl.identifier" : "immudb"
+        },
+        "relationships" : [ {
+          "description" : "uses (for storage)",
+          "destinationId" : "3",
+          "id" : "6",
+          "properties" : {
+            "structurizr.dsl.identifier" : "fe360ffa-8db6-4804-b09f-3939004f3063"
+          },
+          "sourceId" : "5",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container,Database",
+        "technology" : "odbc"
+      }, {
+        "description" : "Provides functionality for customers",
+        "documentation" : { },
+        "id" : "8",
+        "name" : "Customer Website",
+        "properties" : {
+          "structurizr.dsl.identifier" : "customerwebsite"
+        },
+        "relationships" : [ {
+          "description" : "makes API calls to",
+          "destinationId" : "22",
+          "id" : "24",
+          "properties" : {
+            "structurizr.dsl.identifier" : "eaf67419-c67d-453d-8e23-2468701de7a5"
+          },
+          "sourceId" : "8",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "18",
+          "id" : "25",
+          "linkedRelationshipId" : "24",
+          "sourceId" : "8",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "30",
+          "id" : "32",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3d59e0e6-91e0-4d55-934c-ac91d76ac570"
+          },
+          "sourceId" : "8",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "44",
+          "id" : "46",
+          "properties" : {
+            "structurizr.dsl.identifier" : "fabcef13-e3e6-4e25-b43c-7e96ab8660de"
+          },
+          "sourceId" : "8",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        } ],
+        "tags" : "Element,Container,Browser",
+        "technology" : "reactjs*"
+      }, {
+        "description" : "Provides functionality for staff",
+        "documentation" : { },
+        "id" : "11",
+        "name" : "Staff Dashboard*",
+        "properties" : {
+          "structurizr.dsl.identifier" : "staffdashboard"
+        },
+        "relationships" : [ {
+          "description" : "makes API calls to",
+          "destinationId" : "22",
+          "id" : "26",
+          "properties" : {
+            "structurizr.dsl.identifier" : "5b7f33cc-d01e-42b1-a534-415b34ec5f37"
+          },
+          "sourceId" : "11",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "18",
+          "id" : "27",
+          "linkedRelationshipId" : "26",
+          "sourceId" : "11",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "30",
+          "id" : "33",
+          "properties" : {
+            "structurizr.dsl.identifier" : "0977e6db-7e9f-490f-ab02-89d34e1b3525"
+          },
+          "sourceId" : "11",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        }, {
+          "description" : "makes API calls to",
+          "destinationId" : "44",
+          "id" : "47",
+          "properties" : {
+            "structurizr.dsl.identifier" : "4cbb7244-e7a4-4e46-bce4-1ef0c17bd001"
+          },
+          "sourceId" : "11",
+          "tags" : "Relationship",
+          "technology" : "json/https"
+        } ],
+        "tags" : "Element,Container,Browser",
+        "technology" : "reactjs*"
+      }, {
+        "documentation" : { },
+        "group" : "on-prem",
+        "id" : "14",
+        "name" : "Services Service*",
+        "properties" : {
+          "structurizr.dsl.identifier" : "servicesapp"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "group" : "on-prem",
+        "id" : "15",
+        "name" : "Users Service*",
+        "properties" : {
+          "structurizr.dsl.identifier" : "usersapp"
+        },
+        "relationships" : [ {
+          "description" : "sends a request on user deactivation/reactivation",
+          "destinationId" : "38",
+          "id" : "42",
+          "properties" : {
+            "structurizr.dsl.identifier" : "77342e8b-20cd-46d6-ada5-0af80183a7be"
+          },
+          "sourceId" : "15",
+          "tags" : "Relationship",
+          "technology" : "webhook"
+        }, {
+          "description" : "sends a request on user deactivation/reactivation",
+          "destinationId" : "18",
+          "id" : "43",
+          "linkedRelationshipId" : "42",
+          "sourceId" : "15",
+          "technology" : "webhook"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "group" : "on-prem",
+        "id" : "16",
+        "name" : "Payments Service*",
+        "properties" : {
+          "structurizr.dsl.identifier" : "paymentsapp"
+        },
+        "relationships" : [ {
+          "description" : "sends a request on payment success/reversal",
+          "destinationId" : "48",
+          "id" : "52",
+          "properties" : {
+            "structurizr.dsl.identifier" : "981b94e7-20b0-4028-8a31-3532be506305"
+          },
+          "sourceId" : "16",
+          "tags" : "Relationship",
+          "technology" : "webhook"
+        }, {
+          "description" : "sends a request on payment success/reversal",
+          "destinationId" : "18",
+          "id" : "53",
+          "linkedRelationshipId" : "52",
+          "sourceId" : "16",
+          "technology" : "webhook"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "group" : "on-prem",
+        "id" : "17",
+        "name" : "Auth Service*",
+        "properties" : {
+          "structurizr.dsl.identifier" : "authapp"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "description" : "provides functionality related to managing, earning and redeeming Reward points",
+          "documentation" : { },
+          "id" : "19",
+          "name" : "Points Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "pointscomponent"
+          },
+          "relationships" : [ {
+            "description" : "reads from and writes to",
+            "destinationId" : "5",
+            "id" : "20",
+            "properties" : {
+              "structurizr.dsl.identifier" : "b50c6672-9274-4db4-82b5-a5bb3a0095b9"
+            },
+            "sourceId" : "19",
+            "tags" : "Relationship",
+            "technology" : "odbc"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        }, {
+          "description" : "allows users to earn and redeem Reward points, staff to manage Rewards points",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "Points Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "pointscontroller"
+          },
+          "relationships" : [ {
+            "description" : "uses",
+            "destinationId" : "19",
+            "id" : "23",
+            "properties" : {
+              "structurizr.dsl.identifier" : "875aec5f-dbe9-47a5-a285-a9e67ccdfcef"
+            },
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang/gin REST Controller"
+        }, {
+          "description" : "creates, reads, updates transactions",
+          "documentation" : { },
+          "id" : "28",
+          "name" : "Transactions Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "transactionscomponent"
+          },
+          "relationships" : [ {
+            "description" : "reads from and writes to",
+            "destinationId" : "5",
+            "id" : "29",
+            "properties" : {
+              "structurizr.dsl.identifier" : "c6131ff6-c8dc-4533-ade0-57f80e98dc42"
+            },
+            "sourceId" : "28",
+            "tags" : "Relationship",
+            "technology" : "odbc"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        }, {
+          "description" : "functionality to manage transactions",
+          "documentation" : { },
+          "id" : "30",
+          "name" : "Transactions Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "transactionscontroller"
+          },
+          "relationships" : [ {
+            "description" : "uses",
+            "destinationId" : "28",
+            "id" : "31",
+            "properties" : {
+              "structurizr.dsl.identifier" : "0f8d98cb-ee7b-4933-885b-eb3958763c05"
+            },
+            "sourceId" : "30",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang/gin REST Controller"
+        }, {
+          "description" : "queries Service details from on-prem",
+          "documentation" : { },
+          "id" : "34",
+          "name" : "Products Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "servicescomponent"
+          },
+          "relationships" : [ {
+            "description" : "reads from and writes to",
+            "destinationId" : "5",
+            "id" : "35",
+            "properties" : {
+              "structurizr.dsl.identifier" : "871fe0dd-fdb8-4ff4-8e82-d6dedd3d943b"
+            },
+            "sourceId" : "34",
+            "tags" : "Relationship",
+            "technology" : "odbc"
+          }, {
+            "description" : "queries Services",
+            "destinationId" : "14",
+            "id" : "36",
+            "properties" : {
+              "structurizr.dsl.identifier" : "3b25590c-e4b6-406e-a965-aff3b67c9926"
+            },
+            "sourceId" : "34",
+            "tags" : "Relationship",
+            "technology" : "REST API"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        }, {
+          "description" : "queries User details from on-prem",
+          "documentation" : { },
+          "id" : "38",
+          "name" : "Users Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userscomponent"
+          },
+          "relationships" : [ {
+            "description" : "reads from and writes to",
+            "destinationId" : "5",
+            "id" : "39",
+            "properties" : {
+              "structurizr.dsl.identifier" : "5fc174a6-922d-49c9-b936-baa9876fa061"
+            },
+            "sourceId" : "38",
+            "tags" : "Relationship",
+            "technology" : "odbc"
+          }, {
+            "description" : "queries Users",
+            "destinationId" : "15",
+            "id" : "40",
+            "properties" : {
+              "structurizr.dsl.identifier" : "61443867-9fae-46eb-8105-5762daf6931f"
+            },
+            "sourceId" : "38",
+            "tags" : "Relationship",
+            "technology" : "REST API"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        }, {
+          "description" : "functionality to manage user references in the loyalty program",
+          "documentation" : { },
+          "id" : "44",
+          "name" : "Users Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "userscontroller"
+          },
+          "relationships" : [ {
+            "description" : "uses",
+            "destinationId" : "38",
+            "id" : "45",
+            "properties" : {
+              "structurizr.dsl.identifier" : "bcc97b8f-8017-49e0-9663-3359fe827f85"
+            },
+            "sourceId" : "44",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang/gin REST Controller"
+        }, {
+          "description" : "queries Payment details from on-prem",
+          "documentation" : { },
+          "id" : "48",
+          "name" : "Payments Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "paymentscomponent"
+          },
+          "relationships" : [ {
+            "description" : "reads from and writes to",
+            "destinationId" : "5",
+            "id" : "49",
+            "properties" : {
+              "structurizr.dsl.identifier" : "b2f12765-7e44-4fea-8a88-1baeaa7cd4ec"
+            },
+            "sourceId" : "48",
+            "tags" : "Relationship",
+            "technology" : "odbc"
+          }, {
+            "description" : "queries Payments",
+            "destinationId" : "16",
+            "id" : "50",
+            "properties" : {
+              "structurizr.dsl.identifier" : "12a1de3a-3b35-49e3-8432-644e4543fa41"
+            },
+            "sourceId" : "48",
+            "tags" : "Relationship",
+            "technology" : "REST API"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        }, {
+          "description" : "authorizes access by verifying the JWT in Authorization header",
+          "documentation" : { },
+          "id" : "54",
+          "name" : "Auth Component",
+          "properties" : {
+            "structurizr.dsl.identifier" : "authcomponent"
+          },
+          "relationships" : [ {
+            "description" : "sends a request to access the JSON Web Key Sets (JWK)",
+            "destinationId" : "17",
+            "id" : "55",
+            "properties" : {
+              "structurizr.dsl.identifier" : "356c68b0-319e-453c-9261-0b79692cdc65"
+            },
+            "sourceId" : "54",
+            "tags" : "Relationship",
+            "technology" : "HTTP"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : "golang"
+        } ],
+        "documentation" : { },
+        "group" : "AWS Europe (London) Region",
+        "id" : "18",
+        "name" : "Loyalty Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "loyaltyapp"
+        },
+        "relationships" : [ {
+          "description" : "reads from and writes to",
+          "destinationId" : "5",
+          "id" : "21",
+          "linkedRelationshipId" : "20",
+          "sourceId" : "18",
+          "technology" : "odbc"
+        }, {
+          "description" : "queries Services",
+          "destinationId" : "14",
+          "id" : "37",
+          "linkedRelationshipId" : "36",
+          "sourceId" : "18",
+          "technology" : "REST API"
+        }, {
+          "description" : "queries Users",
+          "destinationId" : "15",
+          "id" : "41",
+          "linkedRelationshipId" : "40",
+          "sourceId" : "18",
+          "technology" : "REST API"
+        }, {
+          "description" : "queries Payments",
+          "destinationId" : "16",
+          "id" : "51",
+          "linkedRelationshipId" : "50",
+          "sourceId" : "18",
+          "technology" : "REST API"
+        }, {
+          "description" : "sends a request to access the JSON Web Key Sets (JWK)",
+          "destinationId" : "17",
+          "id" : "56",
+          "linkedRelationshipId" : "55",
+          "sourceId" : "18",
+          "technology" : "HTTP"
+        } ],
+        "tags" : "Element,Container"
+      } ],
+      "documentation" : { },
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "XYZ Enterprises",
+      "properties" : {
+        "structurizr.dsl.identifier" : "xyzss"
+      },
+      "relationships" : [ {
+        "description" : "uses (for storage)",
+        "destinationId" : "3",
+        "id" : "7",
+        "linkedRelationshipId" : "6",
+        "sourceId" : "4"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Name",
+  "properties" : {
+    "structurizr.dsl" : "IWNvbnN0IE9SR0FOSVNBVElPTl9OQU1FICJYWVogRW50ZXJwcmlzZXMiCiFjb25zdCBURUNITk9MT0dZX0pTT05fSFRUUFMgImpzb24vaHR0cHMiCiFjb25zdCBURUNITk9MT0dZX1JFU1QgIlJFU1QgQVBJIgoKd29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgY3VzdG9tZXIgPSBwZXJzb24gIkN1c3RvbWVyIgogICAgICAgIHN0YWZmID0gcGVyc29uICJTdGFmZiIKCiAgICAgICAgYXdzUzNTcyA9IHNvZnR3YXJlU3lzdGVtICJBV1MgUzMiICJBbiBvYmplY3Qgc3RvcmFnZSBzZXJ2aWNlIGJ5IEFtYXpvbiBBV1MiICJFeGlzdGluZyBTeXN0ZW0iCgogICAgICAgIHh5elNzID0gc29mdHdhcmVTeXN0ZW0gIiR7T1JHQU5JU0FUSU9OX05BTUV9IiB7CiAgICAgICAgICAgIGltbXVEQiA9IGNvbnRhaW5lciAgIkltbXVEQiIgImFuIG9wZW4tc291cmNlIGhpZ2ggcGVyZm9ybWFuY2UgaW1tdXRhYmxlIGRhdGFiYXNlIiAib2RiYyIgIkRhdGFiYXNlInsKICAgICAgICAgICAgICAgIHRoaXMgLT4gYXdzUzNTcyAidXNlcyAoZm9yIHN0b3JhZ2UpIgogICAgICAgICAgICB9CgogICAgICAgICAgICBjdXN0b21lcldlYnNpdGUgPSBjb250YWluZXIgIkN1c3RvbWVyIFdlYnNpdGUiICJQcm92aWRlcyBmdW5jdGlvbmFsaXR5IGZvciBjdXN0b21lcnMiICJyZWFjdGpzKiIgIkJyb3dzZXIiIHsKICAgICAgICAgICAgICAgIGN1c3RvbWVyIC0+IHRoaXMgInVzZXMiCiAgICAgICAgICAgIH0gIAoKICAgICAgICAgICAgc3RhZmZEYXNoYm9hcmQgPSBjb250YWluZXIgIlN0YWZmIERhc2hib2FyZCoiICJQcm92aWRlcyBmdW5jdGlvbmFsaXR5IGZvciBzdGFmZiIgInJlYWN0anMqIiAiQnJvd3NlciIgewogICAgICAgICAgICAgICAgc3RhZmYgLT4gdGhpcyAidXNlcyIKICAgICAgICAgICAgfSAgCgogICAgICAgICAgICBncm91cCAib24tcHJlbSJ7CiAgICAgICAgICAgICAgICBzZXJ2aWNlc0FwcCA9IGNvbnRhaW5lciAiU2VydmljZXMgU2VydmljZSoiCiAgICAgICAgICAgICAgICB1c2Vyc0FwcCA9IGNvbnRhaW5lciAiVXNlcnMgU2VydmljZSoiCiAgICAgICAgICAgICAgICBwYXltZW50c0FwcCA9IGNvbnRhaW5lciAiUGF5bWVudHMgU2VydmljZSoiCiAgICAgICAgICAgICAgICBhdXRoQXBwID0gY29udGFpbmVyICJBdXRoIFNlcnZpY2UqIgogICAgICAgICAgICB9IAoKICAgICAgICAgICAgZ3JvdXAgIkFXUyBFdXJvcGUgKExvbmRvbikgUmVnaW9uInsKICAgICAgICAgICAgICAgIGxveWFsdHlBcHAgPSBjb250YWluZXIgIkxveWFsdHkgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIHBvaW50c0NvbXBvbmVudCA9IGNvbXBvbmVudCAiUG9pbnRzIENvbXBvbmVudCIgInByb3ZpZGVzIGZ1bmN0aW9uYWxpdHkgcmVsYXRlZCB0byBtYW5hZ2luZywgZWFybmluZyBhbmQgcmVkZWVtaW5nIFJld2FyZCBwb2ludHMiICJnb2xhbmciIHsKICAgICAgICAgICAgICAgICAgICAgICAgdGhpcyAtPiBpbW11REIgInJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIgIm9kYmMiCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIHBvaW50c0NvbnRyb2xsZXIgPSBjb21wb25lbnQgIlBvaW50cyBDb250cm9sbGVyIiAiYWxsb3dzIHVzZXJzIHRvIGVhcm4gYW5kIHJlZGVlbSBSZXdhcmQgcG9pbnRzLCBzdGFmZiB0byBtYW5hZ2UgUmV3YXJkcyBwb2ludHMiICJnb2xhbmcvZ2luIFJFU1QgQ29udHJvbGxlciJ7CiAgICAgICAgICAgICAgICAgICAgICAgIHRoaXMgLT4gcG9pbnRzQ29tcG9uZW50ICJ1c2VzIgogICAgICAgICAgICAgICAgICAgICAgICBjdXN0b21lcldlYnNpdGUgLT4gdGhpcyAibWFrZXMgQVBJIGNhbGxzIHRvIiAiJHtURUNITk9MT0dZX0pTT05fSFRUUFN9IgogICAgICAgICAgICAgICAgICAgICAgICBzdGFmZkRhc2hib2FyZCAtPiB0aGlzICJtYWtlcyBBUEkgY2FsbHMgdG8iICIke1RFQ0hOT0xPR1lfSlNPTl9IVFRQU30iCiAgICAgICAgICAgICAgICAgICAgfSAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIHRyYW5zYWN0aW9uc0NvbXBvbmVudCA9IGNvbXBvbmVudCAiVHJhbnNhY3Rpb25zIENvbXBvbmVudCIgImNyZWF0ZXMsIHJlYWRzLCB1cGRhdGVzIHRyYW5zYWN0aW9ucyIgImdvbGFuZyIgewogICAgICAgICAgICAgICAgICAgICAgICB0aGlzIC0+IGltbXVEQiAicmVhZHMgZnJvbSBhbmQgd3JpdGVzIHRvIiAib2RiYyIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgdHJhbnNhY3Rpb25zQ29udHJvbGxlciA9IGNvbXBvbmVudCAiVHJhbnNhY3Rpb25zIENvbnRyb2xsZXIiICJmdW5jdGlvbmFsaXR5IHRvIG1hbmFnZSB0cmFuc2FjdGlvbnMiICJnb2xhbmcvZ2luIFJFU1QgQ29udHJvbGxlciJ7CiAgICAgICAgICAgICAgICAgICAgICAgIHRoaXMgLT4gdHJhbnNhY3Rpb25zQ29tcG9uZW50ICJ1c2VzIgogICAgICAgICAgICAgICAgICAgICAgICBjdXN0b21lcldlYnNpdGUgLT4gdGhpcyAibWFrZXMgQVBJIGNhbGxzIHRvIiAiJHtURUNITk9MT0dZX0pTT05fSFRUUFN9IgogICAgICAgICAgICAgICAgICAgICAgICBzdGFmZkRhc2hib2FyZCAtPiB0aGlzICJtYWtlcyBBUEkgY2FsbHMgdG8iICIke1RFQ0hOT0xPR1lfSlNPTl9IVFRQU30iCiAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICBzZXJ2aWNlc0NvbXBvbmVudCA9IGNvbXBvbmVudCAiUHJvZHVjdHMgQ29tcG9uZW50IiAicXVlcmllcyBTZXJ2aWNlIGRldGFpbHMgZnJvbSBvbi1wcmVtIiAiZ29sYW5nIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRoaXMgLT4gaW1tdURCICJyZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iICJvZGJjIgogICAgICAgICAgICAgICAgICAgICAgICB0aGlzIC0+IHNlcnZpY2VzQXBwICJxdWVyaWVzIFNlcnZpY2VzIiAiJHtURUNITk9MT0dZX1JFU1R9IgogICAgICAgICAgICAgICAgICAgIH0gCgogICAgICAgICAgICAgICAgICAgIHVzZXJzQ29tcG9uZW50ID0gY29tcG9uZW50ICJVc2VycyBDb21wb25lbnQiICJxdWVyaWVzIFVzZXIgZGV0YWlscyBmcm9tIG9uLXByZW0iICJnb2xhbmciIHsKICAgICAgICAgICAgICAgICAgICAgICAgdGhpcyAtPiBpbW11REIgInJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIgIm9kYmMiCiAgICAgICAgICAgICAgICAgICAgICAgIHRoaXMgLT4gdXNlcnNBcHAgInF1ZXJpZXMgVXNlcnMiICIke1RFQ0hOT0xPR1lfUkVTVH0iCiAgICAgICAgICAgICAgICAgICAgICAgIHVzZXJzQXBwIC0+IHRoaXMgInNlbmRzIGEgcmVxdWVzdCBvbiB1c2VyIGRlYWN0aXZhdGlvbi9yZWFjdGl2YXRpb24iICJ3ZWJob29rIgogICAgICAgICAgICAgICAgICAgIH0gIAogICAgICAgICAgICAgICAgICAgIHVzZXJzQ29udHJvbGxlciA9IGNvbXBvbmVudCAiVXNlcnMgQ29udHJvbGxlciIgImZ1bmN0aW9uYWxpdHkgdG8gbWFuYWdlIHVzZXIgcmVmZXJlbmNlcyBpbiB0aGUgbG95YWx0eSBwcm9ncmFtIiAiZ29sYW5nL2dpbiBSRVNUIENvbnRyb2xsZXIiewogICAgICAgICAgICAgICAgICAgICAgICB0aGlzIC0+IHVzZXJzQ29tcG9uZW50ICJ1c2VzIgogICAgICAgICAgICAgICAgICAgICAgICBjdXN0b21lcldlYnNpdGUgLT4gdGhpcyAibWFrZXMgQVBJIGNhbGxzIHRvIiAiJHtURUNITk9MT0dZX0pTT05fSFRUUFN9IgogICAgICAgICAgICAgICAgICAgICAgICBzdGFmZkRhc2hib2FyZCAtPiB0aGlzICJtYWtlcyBBUEkgY2FsbHMgdG8iICIke1RFQ0hOT0xPR1lfSlNPTl9IVFRQU30iCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIHBheW1lbnRzQ29tcG9uZW50ID0gY29tcG9uZW50ICJQYXltZW50cyBDb21wb25lbnQiICJxdWVyaWVzIFBheW1lbnQgZGV0YWlscyBmcm9tIG9uLXByZW0iICJnb2xhbmciIHsKICAgICAgICAgICAgICAgICAgICAgICAgdGhpcyAtPiBpbW11REIgInJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIgIm9kYmMiCiAgICAgICAgICAgICAgICAgICAgICAgIHRoaXMgLT4gcGF5bWVudHNBcHAgInF1ZXJpZXMgUGF5bWVudHMiICIke1RFQ0hOT0xPR1lfUkVTVH0iCiAgICAgICAgICAgICAgICAgICAgICAgIHBheW1lbnRzQXBwIC0+IHRoaXMgInNlbmRzIGEgcmVxdWVzdCBvbiBwYXltZW50IHN1Y2Nlc3MvcmV2ZXJzYWwiICJ3ZWJob29rIgogICAgICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICAgICAgYXV0aENvbXBvbmVudCA9IGNvbXBvbmVudCAiQXV0aCBDb21wb25lbnQiICJhdXRob3JpemVzIGFjY2VzcyBieSB2ZXJpZnlpbmcgdGhlIEpXVCBpbiBBdXRob3JpemF0aW9uIGhlYWRlciIgImdvbGFuZyIgewogICAgICAgICAgICAgICAgICAgICAgICB0aGlzIC0+IGF1dGhBcHAgInNlbmRzIGEgcmVxdWVzdCB0byBhY2Nlc3MgdGhlIEpTT04gV2ViIEtleSBTZXRzIChKV0spIiAiSFRUUCIKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgeHl6U3MgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciB4eXpTcyB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGxveWFsdHlBcHAgIkNvbXBvbmVudHMiewogICAgICAgICAgICBpbmNsdWRlICoKCiAgICAgICAgICAgIGluY2x1ZGUgIiogLT4gKiIKICAgICAgICB9CgoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJNb2JpbGVQb3RyYWl0IiB7CiAgICAgICAgICAgICAgICBzaGFwZSBtb2JpbGVkZXZpY2Vwb3J0cmFpdAogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiTW9iaWxlTGFuZHNjYXBlInsKICAgICAgICAgICAgICAgIHNoYXBlIG1vYmlsZWRldmljZWxhbmRzY2FwZQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkJyb3dzZXIiIHsKICAgICAgICAgICAgICAgIHNoYXBlIHdlYmJyb3dzZXIKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgc2hhcGUgY3lsaW5kZXIKICAgICAgICAgICAgfSAgICAgICAgICAgIAogICAgICAgICAgICBlbGVtZW50ICJSb2JvdCIgewogICAgICAgICAgICAgICAgc2hhcGUgcm9ib3QKICAgICAgICAgICAgfSAgICAgICAgICAgCiAgICAgICAgICAgIGVsZW1lbnQgIkZvbGRlciIgewogICAgICAgICAgICAgICAgc2hhcGUgZm9sZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJFeGlzdGluZyBTeXN0ZW0gUm9ib3QiIHsKICAgICAgICAgICAgICAgIHNoYXBlIHJvYm90ICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHRoZW1lIGRlZmF1bHQKICAgIH0KCn0K"
+  },
+  "views" : {
+    "componentViews" : [ {
+      "containerId" : "18",
+      "dimensions" : {
+        "height" : 2620,
+        "width" : 4121
+      },
+      "elements" : [ {
+        "id" : "5",
+        "x" : 1544,
+        "y" : 2120
+      }, {
+        "id" : "8",
+        "x" : 1544,
+        "y" : 200
+      }, {
+        "id" : "11",
+        "x" : 2849,
+        "y" : 200
+      }, {
+        "id" : "14",
+        "x" : 874,
+        "y" : 525
+      }, {
+        "id" : "15",
+        "x" : 2825,
+        "y" : 2101
+      }, {
+        "id" : "16",
+        "x" : 204,
+        "y" : 525
+      }, {
+        "id" : "17",
+        "x" : 3450,
+        "y" : 2101
+      }, {
+        "id" : "19",
+        "x" : 2157,
+        "y" : 1531
+      }, {
+        "id" : "22",
+        "x" : 2156,
+        "y" : 900
+      }, {
+        "id" : "28",
+        "x" : 1511,
+        "y" : 1531
+      }, {
+        "id" : "30",
+        "x" : 1504,
+        "y" : 900
+      }, {
+        "id" : "34",
+        "x" : 865,
+        "y" : 1531
+      }, {
+        "id" : "38",
+        "x" : 2803,
+        "y" : 1531
+      }, {
+        "id" : "44",
+        "x" : 2809,
+        "y" : 900
+      }, {
+        "id" : "48",
+        "x" : 219,
+        "y" : 1531
+      }, {
+        "id" : "54",
+        "x" : 3450,
+        "y" : 1531
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Components",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "20"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "29"
+      }, {
+        "id" : "31"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "39",
+        "vertices" : [ {
+          "x" : 2721,
+          "y" : 1902
+        } ]
+      }, {
+        "id" : "40",
+        "vertices" : [ {
+          "x" : 2924,
+          "y" : 1961
+        } ]
+      }, {
+        "id" : "42",
+        "vertices" : [ {
+          "x" : 3215,
+          "y" : 1986
+        } ]
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "50",
+        "vertices" : [ {
+          "x" : 624,
+          "y" : 1015
+        } ]
+      }, {
+        "id" : "52",
+        "vertices" : [ {
+          "x" : 279,
+          "y" : 1070
+        } ]
+      }, {
+        "id" : "55"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "Components",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "background" : "#ffffff",
+          "shape" : "MobileDevicePortrait",
+          "tag" : "MobilePotrait"
+        }, {
+          "shape" : "MobileDeviceLandscape",
+          "tag" : "MobileLandscape"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "Browser"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        }, {
+          "shape" : "Robot",
+          "tag" : "Robot"
+        }, {
+          "shape" : "Folder",
+          "tag" : "Folder"
+        }, {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "tag" : "Existing System"
+        }, {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "shape" : "Robot",
+          "tag" : "Existing System Robot"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "dimensions" : {
+        "height" : 3335,
+        "width" : 2282
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 236,
+        "y" : 200
+      }, {
+        "id" : "2",
+        "x" : 1001,
+        "y" : 200
+      }, {
+        "id" : "3",
+        "x" : 615,
+        "y" : 2835
+      }, {
+        "id" : "5",
+        "x" : 620,
+        "y" : 2135
+      }, {
+        "id" : "8",
+        "x" : 220,
+        "y" : 798
+      }, {
+        "id" : "11",
+        "x" : 970,
+        "y" : 798
+      }, {
+        "id" : "14",
+        "x" : 1592,
+        "y" : 1498
+      }, {
+        "id" : "15",
+        "x" : 1592,
+        "y" : 1065
+      }, {
+        "id" : "16",
+        "x" : 1592,
+        "y" : 1931
+      }, {
+        "id" : "17",
+        "x" : 1592,
+        "y" : 2365
+      }, {
+        "id" : "18",
+        "x" : 630,
+        "y" : 1495
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "12"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "41",
+        "vertices" : [ {
+          "x" : 1406,
+          "y" : 1450
+        } ]
+      }, {
+        "id" : "43",
+        "vertices" : [ {
+          "x" : 1401,
+          "y" : 1245
+        } ]
+      }, {
+        "id" : "51",
+        "vertices" : [ {
+          "x" : 1271,
+          "y" : 1920
+        } ]
+      }, {
+        "id" : "53",
+        "vertices" : [ {
+          "x" : 1381,
+          "y" : 1795
+        } ]
+      }, {
+        "id" : "56",
+        "vertices" : [ {
+          "x" : 1296,
+          "y" : 2100
+        } ]
+      }, {
+        "id" : "6"
+      }, {
+        "id" : "9"
+      } ],
+      "softwareSystemId" : "4"
+    } ],
+    "systemContextViews" : [ {
+      "dimensions" : {
+        "height" : 1900,
+        "width" : 1550
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 949,
+        "y" : 199
+      }, {
+        "id" : "3",
+        "x" : 574,
+        "y" : 1399
+      }, {
+        "id" : "4",
+        "x" : 574,
+        "y" : 799
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "10"
+      }, {
+        "id" : "13"
+      }, {
+        "id" : "7"
+      } ],
+      "softwareSystemId" : "4"
+    } ]
+  }
+}
